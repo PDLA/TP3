@@ -2,6 +2,12 @@
     x:Class="Front.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Front">
+    xmlns:local="using:Front"
+    xmlns:vm="using:Front.ViewModels"    
+    RequestedTheme="Dark">
+    <Application.Resources>
+        <!--Global View Model Locator-->
+        <vm:ViewModelLocator x:Key="Locator"/>
+    </Application.Resources>
 
 </Application>
