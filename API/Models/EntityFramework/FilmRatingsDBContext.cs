@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TP3.Models.EntityFramework
+namespace API.Models.EntityFramework
 {
     public class FilmRatingsDBContext : DbContext
     {

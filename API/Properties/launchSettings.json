@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "TP3": {
+    "API": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

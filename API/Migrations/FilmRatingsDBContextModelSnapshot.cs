@@ -6,22 +6,21 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
-using TP3.Models.EntityFramework;
+using API.Models.EntityFramework;
 
-namespace TP3.Migrations
+namespace API.Migrations
 {
     [DbContext(typeof(FilmRatingsDBContext))]
-    [Migration("20181024121033_CreationBDFilmRating")]
-    partial class CreationBDFilmRating
+    partial class FilmRatingsDBContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.0.3-rtm-10026")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("TP3.Models.EntityFramework.Avis", b =>
+            modelBuilder.Entity("API.Models.EntityFramework.Avis", b =>
                 {
                     b.Property<int>("CompteId")
                         .HasColumnName("CPT_ID");
@@ -59,7 +58,7 @@ namespace TP3.Migrations
                     b.ToTable("T_E_AVIS_AVI");
                 });
 
-            modelBuilder.Entity("TP3.Models.EntityFramework.Compte", b =>
+            modelBuilder.Entity("API.Models.EntityFramework.Compte", b =>
                 {
                     b.Property<int>("CompteId")
                         .ValueGeneratedOnAdd()
@@ -135,7 +134,7 @@ namespace TP3.Migrations
                     b.ToTable("T_E_COMPTE_CPT");
                 });
 
-            modelBuilder.Entity("TP3.Models.EntityFramework.Favori", b =>
+            modelBuilder.Entity("API.Models.EntityFramework.Favori", b =>
                 {
                     b.Property<int>("CompteId")
                         .HasColumnName("CPT_ID");
@@ -151,7 +150,7 @@ namespace TP3.Migrations
                     b.ToTable("T_J_FAVORI_FAV");
                 });
 
-            modelBuilder.Entity("TP3.Models.EntityFramework.Film", b =>
+            modelBuilder.Entity("API.Models.EntityFramework.Film", b =>
                 {
                     b.Property<int>("FilmId")
                         .ValueGeneratedOnAdd()
@@ -193,27 +192,27 @@ namespace TP3.Migrations
                     b.ToTable("T_E_FILM_FLM");
                 });
 
-            modelBuilder.Entity("TP3.Models.EntityFramework.Avis", b =>
+            modelBuilder.Entity("API.Models.EntityFramework.Avis", b =>
                 {
-                    b.HasOne("TP3.Models.EntityFramework.Compte", "CompteAvis")
+                    b.HasOne("API.Models.EntityFramework.Compte", "CompteAvis")
                         .WithMany("AvisCompte")
                         .HasForeignKey("CompteId")
                         .HasConstraintName("FK_AVI_CPT");
 
-                    b.HasOne("TP3.Models.EntityFramework.Film", "FilmAvis")
+                    b.HasOne("API.Models.EntityFramework.Film", "FilmAvis")
                         .WithMany("AvisFilm")
                         .HasForeignKey("FilmId")
                         .HasConstraintName("FK_AVI_FLM");
                 });
 
-            modelBuilder.Entity("TP3.Models.EntityFramework.Favori", b =>
+            modelBuilder.Entity("API.Models.EntityFramework.Favori", b =>
                 {
-                    b.HasOne("TP3.Models.EntityFramework.Compte", "CompteFavori")
+                    b.HasOne("API.Models.EntityFramework.Compte", "CompteFavori")
                         .WithMany("FavorisCompte")
                         .HasForeignKey("CompteId")
                         .HasConstraintName("FK_FAV_CPT");
 
-                    b.HasOne("TP3.Models.EntityFramework.Film", "FilmFavori")
+                    b.HasOne("API.Models.EntityFramework.Film", "FilmFavori")
                         .WithMany("FavorisFilm")
                         .HasForeignKey("FilmId")
                         .HasConstraintName("FK_FAV_FLM");

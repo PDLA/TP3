@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TP3.Models.EntityFramework
+namespace API.Models.EntityFramework
 {
     [Table("T_E_FILM_FLM")]
     public class Film

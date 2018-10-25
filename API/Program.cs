@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using TP3.Models.EntityFramework;
+using API.Models.EntityFramework;
 
-namespace TP3
+namespace API
 {
     public class Program
     {

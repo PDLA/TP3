@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TP3;
-using TP3.Models.EntityFramework;
+using API;
+using API.Models.EntityFramework;
 
-namespace TP3.Controllers
+namespace API.Controllers
 {
     [Produces("application/json")]
     [Route("api/Compte/[action]")]
